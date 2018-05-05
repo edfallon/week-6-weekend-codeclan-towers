@@ -62,4 +62,49 @@ public class HotelTest {
         hotel1.addBedroom(bedroom1);
         assertEquals(1, hotel1.bedroomCount());
     }
+
+    @Test
+    public void canCheckGuestIntoDiningRoom(){
+        hotel1.addDiningRoom(dining1);
+        hotel1.checkGuestIntoRoom(dining1, guest1);
+        assertEquals(1, dining1.guestListCount());
+    }
+
+    @Test
+    public void canCheckGuestOutOfDiningRoom(){
+        hotel1.addDiningRoom(dining1);
+        hotel1.checkGuestIntoRoom(dining1, guest1);
+        hotel1.checkGuestOutOfRoom(dining1, guest1);
+        assertEquals(0, dining1.guestListCount());
+    }
+
+    @Test
+    public void canCheckGuestIntoConferenceRoom(){
+        hotel1.addConferenceRoom(conference1);
+        hotel1.checkGuestIntoRoom(conference1, guest1);
+        assertEquals(1, conference1.guestListCount());
+    }
+
+    @Test
+    public void canCheckGuestOutOfConferenceRoom(){
+        hotel1.addConferenceRoom(conference1);
+        hotel1.checkGuestIntoRoom(conference1, guest1);
+        hotel1.checkGuestOutOfRoom(conference1, guest1);
+        assertEquals(0, conference1.guestListCount());
+    }
+
+    @Test
+    public void canCheckGuestIntoBedroom(){
+        hotel1.addBedroom(bedroom1);
+        hotel1.checkGuestIntoRoom(bedroom1, guest1);
+        assertEquals(1, bedroom1.guestListCount());
+    }
+
+    @Test
+    public void canCheckGuestOutOfBedroom(){
+        hotel1.addBedroom(bedroom1);
+        hotel1.checkGuestIntoRoom(bedroom1, guest1);
+        hotel1.checkGuestOutOfRoom(bedroom1, guest1);
+        assertEquals(0, bedroom1.guestListCount());
+    }
 }

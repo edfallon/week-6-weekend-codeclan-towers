@@ -4,6 +4,7 @@ import guests.Guest;
 import rooms.Bedroom;
 import rooms.Conference;
 import rooms.Dining;
+import rooms.Room;
 
 import java.util.ArrayList;
 
@@ -42,5 +43,14 @@ public class Hotel {
 
     public void addBedroom(Bedroom bedroom) {
         this.bedroomArray.add(bedroom);
+    }
+
+    public void checkGuestIntoRoom(Room room, Guest guest) {
+        room.checkInGuest(guest);
+
+    }
+
+    public void checkGuestOutOfRoom(Room room, Guest guest) {
+        room.checkOutGuest(guest);
     }
 }
