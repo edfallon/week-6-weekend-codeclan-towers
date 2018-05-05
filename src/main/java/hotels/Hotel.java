@@ -31,4 +31,16 @@ public class Hotel {
     public int diningCount() {
         return diningArray.size();
     }
+
+    public void addDiningRoom(Dining dining) {
+        this.diningArray.add(dining);
+    }
+
+    public void addConferenceRoom(Conference conference) {
+        this.conferenceArray.add(conference);
+    }
+
+    public void addBedroom(Bedroom bedroom) {
+        this.bedroomArray.add(bedroom);
+    }
 }
