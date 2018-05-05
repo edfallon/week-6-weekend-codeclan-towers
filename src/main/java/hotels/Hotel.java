@@ -3,6 +3,7 @@ package hotels;
 import guests.Guest;
 import rooms.Bedroom;
 import rooms.Conference;
+import rooms.Dining;
 
 import java.util.ArrayList;
 
@@ -10,10 +11,12 @@ public class Hotel {
 
     private ArrayList<Bedroom> bedroomArray;
     private ArrayList<Conference> conferenceArray;
+    private ArrayList<Dining> diningArray;
 
     public Hotel() {
         this.bedroomArray = new ArrayList<>();
         this.conferenceArray = new ArrayList<>();
+        this.diningArray = new ArrayList<>();
     }
 
 
@@ -23,5 +26,9 @@ public class Hotel {
 
     public int conferenceCount() {
         return conferenceArray.size();
+    }
+
+    public int diningCount() {
+        return diningArray.size();
     }
 }

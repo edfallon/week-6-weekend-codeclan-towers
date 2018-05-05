@@ -28,4 +28,9 @@ public class HotelTest {
     public void conferenceArrayStartsEmpty(){
         assertEquals(0, hotel1.conferenceCount());
     }
+
+    @Test
+    public void diningArrayStartsEmpty(){
+        assertEquals(0, hotel1.diningCount());
+    }
 }
