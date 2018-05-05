@@ -37,4 +37,11 @@ public class BedroomTest {
         bedroom1.checkInGuest(guest1);
         assertEquals(1, bedroom1.guestListCount());
     }
+
+    @Test
+    public void canCheckOutGuest(){
+        bedroom1.checkInGuest(guest1);
+        bedroom1. checkOutGuest(guest1);
+        assertEquals(0, bedroom1.guestListCount());
+    }
 }

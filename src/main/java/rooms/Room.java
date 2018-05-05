@@ -24,4 +24,8 @@ public abstract class Room {
     public void checkInGuest(Guest guest) {
         this.guestList.add(guest);
     }
+
+    public void checkOutGuest(Guest guest) {
+        this.guestList.remove(guest);
+    }
 }
