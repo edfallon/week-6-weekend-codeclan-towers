@@ -28,4 +28,12 @@ public abstract class Room {
     public void checkOutGuest(Guest guest) {
         this.guestList.remove(guest);
     }
+
+
+    public Guest showAllGuests() {
+        for (Guest guest : this.guestList) {
+            return guest;
+        }
+        return null;
+    }
 }
